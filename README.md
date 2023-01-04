@@ -43,7 +43,7 @@ Open a terminal and you can start working on your home directory (`/Users/<usern
 Clone the git repository to your local machine by running the following command on your terminal.
 
 ```sh
-git clone git@github.com:tomtvr/webex-teams-python-bot-project.git --recursive
+git clone git@github.com:tomtvr/webex-python-bot-project.git --recursive
 ```
 
 To go to the directory you have just cloned simply run `cd webex-teams-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
