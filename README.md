@@ -51,7 +51,7 @@ To go to the directory you have just cloned simply run `cd webex-teams-python-bo
 After installing Python, open terminal and run the following command to install dependencies.
 
 ```sh
-pip3 install flask requests ./webexteamssdk
+pip3 install flask requests ./webexsdk
 ```
 
 ## Run Bot
