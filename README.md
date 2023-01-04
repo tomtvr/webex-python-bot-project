@@ -46,7 +46,7 @@ Clone the git repository to your local machine by running the following command 
 git clone git@github.com:tomtvr/webex-python-bot-project.git --recursive
 ```
 
-To go to the directory you have just cloned simply run `cd webex-teams-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
+To go to the directory you have just cloned simply run `cd webex-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
 
 After installing Python, open terminal and run the following command to install dependencies.
 
@@ -58,7 +58,7 @@ pip3 install flask requests ./webexsdk
 
 ### 1. Run Ngrok
 
-Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-teams-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
+Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
 
 ```sh
 ./ngrok http 12000
@@ -68,7 +68,7 @@ Unzip the ngrok file that you downloaded above and copy the executable file to t
 
 Open `task1.py` with your favourite text editor. If you still do not have one, take a quick look at [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or (in case you are a very brave developer) [Vim](https://www.vim.org).
 
-Replace `<my-bot-access-token>` on Line 8 with the Access Token you saved during the **Create a Bot** step.
+Replace `<my-bot-access-token>` on Line 8 with the Access Token you saved during the **Create a Bot** step. Remember to copy the token into the string provided, otherwise it won't be recognised correctly.
 
 ### 3. Run Bot
 
