@@ -28,6 +28,8 @@ Now that your Bot has been created, save the **Access Token** since you will nee
 
 "Python is an interpreted, high-level, general-purpose programming language" [Link to install the latest python version](https://www.python.org/downloads/).
 
+For Mac and Linux make sure to use Python 3 and that when using the ```python``` command in the terminal that it points to Python 3. You can check this by using the ```python --version``` command. If for whatever reason it points to python 2 (which is now end of life) substitue the python commands with ```python3``` and pip commands with ```pip3```.
+
 ### Download Ngrok
 
 "Ngrok exposes local servers behind NATs and firewalls to the public internet over secure tunnels." [Link to download ngrok](https://ngrok.com/download).
@@ -50,8 +52,14 @@ To go to the directory you have just cloned simply run `cd webex-python-bot-proj
 
 After installing Python, open terminal and run the following command to install dependencies.
 
+**Mac and Linux**
 ```sh
 pip3 install flask requests ./webexsdk
+```
+
+**Windows**
+```sh
+pip install flask requests ./webexsdk
 ```
 
 ## Run Bot
@@ -60,8 +68,14 @@ pip3 install flask requests ./webexsdk
 
 Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
 
+**Mac and Linux**
 ```sh
 ./ngrok http 12000
+```
+
+**Windows**
+```sh
+.\ngrok.exe http 12000
 ```
 
 ### 2. Configure Access Token
@@ -75,7 +89,7 @@ Replace `<my-bot-access-token>` on Line 8 with the Access Token you saved during
 On the terminal window, run the following to get your bot working.
 
 ```sh
-python3 task1.py
+python task1.py
 ```
 
 ### 4. Interact with your Bot
@@ -93,7 +107,7 @@ Follow the steps of the previous task to create a new bot called "Poll Bot". Gra
 To run the bot, execute in a terminal the command:
 
 ```sh
-python3 task2.py
+python task2.py
 ```
 
 Make sure that ngrok is also running like in the previous task in a separate terminal.
