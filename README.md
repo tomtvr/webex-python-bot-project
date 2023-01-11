@@ -52,12 +52,6 @@ To go to the directory you have just cloned simply run `cd webex-python-bot-proj
 
 After installing Python, open terminal and run the following command to install dependencies.
 
-**Mac and Linux**
-```sh
-pip3 install flask requests ./webexsdk
-```
-
-**Windows**
 ```sh
 pip install flask requests ./webexsdk
 ```
