@@ -62,6 +62,26 @@ pip install flask requests ./webexsdk
 
 Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
 
+Before you can use ngrok you need to sign up for an account to provide an authorisation key.
+
+Go to https://dashboard.ngrok.com/signup
+
+and follow the steps on: https://dashboard.ngrok.com/get-started/your-authtoken
+
+On the terminal window, you can run this to add your user token:
+
+**Mac and Linux**
+```sh
+./ngrok config add-authtoken <your auth token>
+```
+
+**Windows**
+```sh
+.\ngrok.exe config add-authtoken <your auth token>
+```
+
+Then to run ngrok use one of the following commands:
+
 **Mac and Linux**
 ```sh
 ./ngrok http 12000
