@@ -72,7 +72,7 @@ On the terminal window, you can run this to add your user token:
 
 **Mac and Linux**
 ```sh
-./ngrok config add-authtoken <your auth token>
+ngrok config add-authtoken <your auth token>
 ```
 
 **Windows**
@@ -240,8 +240,6 @@ More information can be found here: https://code.visualstudio.com/docs/python/de
 
 # Task 4 - Create a new bot of your own
 Now it's time to take everything you have learnt from the previous few tasks and create a bot of your own. 🥳
-
-The theme of this bot should be focussed around improving productivity.
 
 Here are a few ideas to get you started:
 * A bot to help remind you of important events coming up
