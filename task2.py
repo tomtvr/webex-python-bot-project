@@ -2,7 +2,7 @@ import json
 from common.poll import Poll
 from flask import Flask, request
 from common.utils import create_webhook
-from webexteamssdk import WebexTeamsAPI, Webhook
+from webexpythonsdk import WebexAPI, Webhook
 
 WEBEX_TEAMS_ACCESS_TOKEN = '<bot-access-token>'
 
@@ -264,7 +264,7 @@ def send_message_in_room(room_id, message):
     teams_api.messages.create(roomId=room_id, text=message)
 
 if __name__ == '__main__':
-    teams_api = WebexTeamsAPI(access_token=WEBEX_TEAMS_ACCESS_TOKEN)
+    teams_api = WebexAPI(access_token=WEBEX_TEAMS_ACCESS_TOKEN)
     create_webhook(teams_api, 'messages_webhook', '/messages_webhook', 'messages')
     create_webhook(teams_api, 'attachmentActions_webhook', '/attachmentActions_webhook', 'attachmentActions')
     app.run(host='0.0.0.0', port=12000)
