@@ -1,3 +1,0 @@
-[submodule "webexsdk"]
-	path = webexsdk
-	url = https://github.com/CiscoDevNet/webexteamssdk
