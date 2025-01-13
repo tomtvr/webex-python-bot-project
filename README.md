@@ -50,11 +50,34 @@ git clone git@github.com:tomtvr/webex-python-bot-project.git --recursive
 
 To go to the directory you have just cloned simply run `cd webex-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
 
-After installing Python, open terminal and run the following command to install dependencies.
+
+We recomend using a python virtual environment to install your dependencies too. You can find help on this [here](https://docs.python.org/3/library/venv.html).
+
+After installing Python, open terminal and run the following command to create a virtual environment:
 
 ```sh
-pip install flask requests ./webexsdk
+python -m venv myvenv
 ```
+
+This will create a python virtual environment in the code directory for you to use. To use this in the terminal you have to run the following command
+
+### Mac/Linux
+```sh
+source ./myenv/bin/activate
+```
+
+### Windows
+```sh
+.\myvenv\Scripts\activate
+```
+
+The dependencies that then be installed using the following pip command:
+
+```sh
+pip install flask requests webexpythonsdk
+```
+
+Remember each time you create a new terminal, you need to activate your virtual environment. Visual Studio Code can help with automatically picking this up, information can be found [here](https://code.visualstudio.com/docs/python/environments#_creating-environments) on how to do this.
 
 ## Run Bot
 
@@ -84,7 +107,7 @@ Then to run ngrok use one of the following commands:
 
 **Mac and Linux**
 ```sh
-./ngrok http 12000
+ngrok http 12000
 ```
 
 **Windows**
