@@ -63,7 +63,7 @@ This will create a python virtual environment in the code directory for you to u
 
 ### Mac/Linux
 ```sh
-source ./myenv/bin/activate
+source ./myvenv/bin/activate
 ```
 
 ### Windows
