@@ -71,10 +71,10 @@ source ./myvenv/bin/activate
 .\myvenv\Scripts\activate
 ```
 
-The dependencies that then be installed using the following pip command:
+The required dependencies can then be installed using the following pip command:
 
 ```sh
-pip install flask requests webexpythonsdk
+pip install -r requirements.txt
 ```
 
 Remember each time you create a new terminal, you need to activate your virtual environment. Visual Studio Code can help with automatically picking this up, information can be found [here](https://code.visualstudio.com/docs/python/environments#_creating-environments) on how to do this.
@@ -117,9 +117,24 @@ ngrok http 12000
 
 ### 2. Configure Access Token
 
-Open `task1.py` with your favourite text editor. If you still do not have one, take a quick look at [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or (in case you are a very brave developer) [Vim](https://www.vim.org).
+Create a new file named `.env` in the root directory of this project. This is the same folder where `task1.py` is located. Use your favourite text editor to open the `.env` file. If you still do not have one yet, take a quick look at [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or (in case you are a very brave developer) [Vim](https://www.vim.org).
 
-Replace `<my-bot-access-token>` on Line 8 with the Access Token you saved during the **Create a Bot** step. Remember to copy the token into the string provided, otherwise it won't be recognised correctly.
+In the `.env` file, add the following line:
+
+```
+WEBEX_TEAMS_ACCESS_TOKEN='<my-bot-access-token>'
+```
+
+Replace <my-bot-access-token> with the Access Token you saved during the **Create a Bot** step. Make sure the token is enclosed in quotes, otherwise, it won't be recognised correctly.
+
+Next, open `task1.py`. This file contains the main code for your bot. If this is your first time seeing Python code, here are a few things to note:
+
+- **Indentation Matters**: Python uses indentation to define blocks of code, such as those inside functions or loops. Consistent indentation is crucial for the code to run correctly, so make sure to use the same number of spaces or tabs throughout.
+- **Comments for Clarity**: Comments in Python start with a `#` symbol and are used to add explanations or notes about the code. They are not executed by the program and are a great way to make your code more understandable for yourself and others.
+- **Defining Functions**: Functions are reusable blocks of code that perform a specific task. They are defined using the `def` keyword, followed by the function name and parentheses.
+- **Handling Strings**: Strings are sequences of characters enclosed in quotes, either single (') or double ("). Both types of quotes are used to define string literals in Python.
+
+Additionally, take advantage of syntax highlighting in your text editor. It visually distinguishes different parts of the code, like keywords, strings, and comments, making it easier to read and debug.
 
 ### 3. Run Bot
 
@@ -138,7 +153,7 @@ To start interacting with the bot, type `@<bot_name>` along with your message. F
 The goal of this task is for you to get the poll bot up and running and make a few test polls with the rest of your team.
 
 ## Create new poll bot in your bots
-Follow the steps of the previous task to create a new bot called "Poll Bot". Grab and insert the access token into the string replacing ```<bot-access-token>``` with your token value.
+Follow the steps of the previous task to create a new bot called "Poll Bot".
 
 ## Run the bot
 To run the bot, execute in a terminal the command:
