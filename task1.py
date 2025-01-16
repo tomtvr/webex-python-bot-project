@@ -1,10 +1,19 @@
 from ctypes import util
 from flask import Flask, request
+from dotenv import load_dotenv
+import os
 
 from common.utils import create_webhook
 from webexpythonsdk import WebexAPI, Webhook
 
-WEBEX_TEAMS_ACCESS_TOKEN = '<bot-access-token>'
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the bot access token from the environment variable
+WEBEX_TEAMS_ACCESS_TOKEN = os.getenv('WEBEX_TEAMS_ACCESS_TOKEN')
+
+if not WEBEX_TEAMS_ACCESS_TOKEN:
+    raise ValueError("WEBEX_TEAMS_ACCESS_TOKEN is not set correctly in the environment variables")
 
 teams_api = None
 
