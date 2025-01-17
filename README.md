@@ -79,6 +79,16 @@ pip install -r requirements.txt
 
 Remember each time you create a new terminal, you need to activate your virtual environment. Visual Studio Code can help with automatically picking this up, information can be found [here](https://code.visualstudio.com/docs/python/environments#_creating-environments) on how to do this.
 
+When running the virtual environment activation script on Windows, there could be some "Execution Policy" changes needed to do this.
+
+You need to run the following command from the terminal:
+
+```sh
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+More information for this can be found [here](https://docs.python.org/3/library/venv.html) and [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4).
+
 ## Run Bot
 
 ### 1. Run Ngrok
