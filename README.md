@@ -101,7 +101,6 @@ sudo pacman -S python
 ```
 
 ⚠️ **IMPORTANT:** When installing Python, make sure to check "Add Python to PATH"
-![Python PATH checkbox screenshot]
 
 ### Install Visual Studio Code
 
@@ -304,7 +303,7 @@ Notice: My auth token in this example is censored for security reasons. If you e
 
 Click the copy symbol on the right of the auth token, and paste it into your terminal.
 
-**Important:**For windows users you may need to add .\ before the command to directly address ngrok from your current directory.
+**Important:** For windows users you may need to add .\ before the command to directly address ngrok from your current directory.
 
 On the terminal window, you can run this to add your user token:
 
