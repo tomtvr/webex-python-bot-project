@@ -51,15 +51,14 @@ Step by step:
 
 If you are on windows, go to the [Git for Windows](https://git-scm.com/downloads/win) website and download the installer.
 
-If you are on macOS, open the terminal and run the following command:
+If you are on any Linux distribution, open the terminal and use your respective package manager to install git.
 
+such as:
+
+**MacOS**
 ```sh
 xcode-select --install
 ```
-
-**Ignore this step if you are on Windows.** If you are on any Linux distribution, open the terminal and use your respective package manager to install git.
-
-such as:
 
 **Debian/Ubuntu**
 ```sh
