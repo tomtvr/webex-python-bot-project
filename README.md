@@ -14,21 +14,145 @@ Go to [Cisco Webex for Developers](https://developer.webex.com/) and click **Sig
 
 Go back to [Cisco Webex for Developers](https://developer.webex.com/) and log in with your account details.
 
-Click **Documentation** on the top bar and select the **Bots** section on the left. On this [Bots Documentation](https://developer.webex.com/docs/bots) webpage you will find an extended explanation on what Bots are and how to create them.
+Once logged in, click on the **Start Building Apps** button.
 
-To proceed, click on the **Create a Bot** button and fill up all the required information to describe your new Bot. Finally, scroll down and click on the **Add Bot** button.
+Here you will see a header saying **"Create a New App"**. Click on the **Create a Bot** button. This will be one of the 4 options you can choose from.
 
-Now that your Bot has been created, save the **Access Token** since you will need it later.
+Once you have clicked on the **Create a Bot** button, you will be redirected to a page where you will need to fill in the information for your bot.
+
+The steps are simple, the first field is the **Bot name**, this is the name that will be displayed on Webex when you interact with your bot.
+
+The second field is the **Bot Username**, this is the username that will be used to interact with your bot. This can't be changed later, and will be used to invite the bot to your webex space.
+
+The third field is the **Icon**, this is the avatar that will be displayed on Webex when you interact with your bot. You can either upload an image or use the predefined ones.
+
+The fourth field is the **App Hub Description**, this is the description that will be displayed on Webex when you interact with your bot.
+
+After filling in all the information, click on the button at the bottom of the page that says **Add Bot**.
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+This is the most important part, once the bot has been created, you will see a section that says **"Bot Access Token"**. This is essentially the key/password to your bot, it is standard practice to save this somewhere safe that no one can access.
+
+![alt text](image-2.png)
+
+Temporarily copy and paste the access token into notepad or any text editor, we will need it later.
+
+![alt text](image-3.png)
+
+<br>
 
 ### Install Git
 
 "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency." [Link to install git](https://git-scm.com/download/).
 
+Step by step:
+
+If you are on windows, go to the [Git for Windows](https://git-scm.com/downloads/win) website and download the installer.
+
+If you are on any Linux distribution, open the terminal and use your respective package manager to install git.
+
+such as:
+
+**MacOS**
+```sh
+xcode-select --install
+```
+
+**Debian/Ubuntu**
+```sh
+sudo apt-get install git
+```
+
+**Arch Linux**
+```sh
+sudo pacman -S git
+```
+
+If you are running the windows installer, once the installer is downloaded, launch it and follow the instructions, it may ask you to add git to your path, say yes to this. aside from that, you don't need to change anything during the installation.
+
 ### Install Python
 
 "Python is an interpreted, high-level, general-purpose programming language" [Link to install the latest python version](https://www.python.org/downloads/).
 
-For Mac and Linux make sure to use Python 3 and that when using the ```python``` command in the terminal that it points to Python 3. You can check this by using the ```python --version``` command. If for whatever reason it points to python 2 (which is now end of life) substitue the python commands with ```python3``` and pip commands with ```pip3```.
+Step by step:
+
+Click on the highlighted link above if you are on windows to download the installer. then launch it, now this next step is **EXTREMELY IMPORTANT**.
+
+When the installer asks you to install python to your PATH, say yes to this, it is important so that when you are using Visual Studio Code, it can correctly identify the python installation as well as use pip within the terminal. Failing to follow this step will cause a lot of problems later on. After the installation is complete, you can close the installer.
+
+**Ignore this step if you are on Windows.** For Mac and Linux make sure to use Python 3 and that when using the ```python``` command in the terminal that it points to Python 3. You can check this by using the ```python --version``` command. If for whatever reason it points to python 2 (which is now end of life) substitue the python commands with ```python3``` and pip commands with ```pip3```.
+
+**For MAC**
+```sh
+brew install python
+```
+
+**For Linux (Debian/Ubuntu)**
+```sh
+sudo apt-get install python3
+```
+
+**For Linux (Arch Linux)**
+```sh
+sudo pacman -S python
+```
+
+⚠️ **IMPORTANT:** When installing Python, make sure to check "Add Python to PATH"
+
+### Install Visual Studio Code
+
+"Visual Studio Code is a source-code editor made by Microsoft for Windows, Linux and macOS." [Link to download Visual Studio Code](https://code.visualstudio.com/download).
+
+Step by step:
+
+Click on the highlighted link above if you are on windows to download the installer. then launch it, and just follow the instructions, it will ask you to add visual studio code to your PATH, say yes to this. then you should be good to go.
+
+**Ignore this step if you are on Windows.** For Mac and Linux, open the terminal and run the following command:
+
+**Mac** 
+```sh
+brew install --cask visual-studio-code
+```
+
+**Linux (Debian/Ubuntu)**
+```sh
+sudo apt-get install code
+```
+
+**Linux (Arch Linux)**
+```sh
+sudo pacman -S visual-studio-code-bin
+```
+
+Once visual studio code is installed, launch it, and you should be greeted with a welcome screen where it will give you a quick tour of the interface. and your visual preferences, you can customise these to your liking.
+
+![alt text](image-4.png)
+
+After the welcome screen, you will be greeted with the main interface, this is where you will be doing most of your work.
+
+![alt text](image-5.png)
+
+On the left side of the screen, click **"Open Folder"**, and navigate to the directory you would like to work in. My recommendation is to create a new folder in your Documents folder called **"code"**.
+
+![alt text](image-6.png)
+
+Once you are done with that, click **"Select Folder"**.
+
+Visual studio also features a bunch of extensions that you can install to help with your development, these are called **"Extensions"**.
+
+One suggestion that is mandatory for this project is the **"Python"** extension, this will help you with syntax highlighting, linting, and other features that will help you with your development. It also allows you to run your code directly from the editor.
+
+![alt text](image-7.png)
+
+Click **"Install"** on the extension.
+
+Now, navigate back to your project directory, and on the top left corner, click **Terminal** and then **New Terminal**.
+
+![alt text](image-8.png)
+
+If this is your first time using the terminal, do not worry, it is very simple to use once you learn the hang of it, all we will be using are the commands that we have already installed and mentioned in this project.
 
 ### Download Ngrok
 
@@ -36,20 +160,58 @@ For Mac and Linux make sure to use Python 3 and that when using the ```python```
 
 ## Setup Bot
 
-### 1. Open Terminal and Define Working Directory
+### 1. Open Terminal in Visual Studio Code
 
-Open a terminal and you can start working on your home directory (`/Users/<username>` for macOS, `<root>\Users\<username>` for Windows or `/home/<username>` for Linux). Otherwise, you can navigate to another directory using `cd <other-directory>`.
+Using your previously opened terminal, you can run the following command to clone the git repository to your local machine.
 
-### 2. Clone git Repository and Install Dependencies
+```sh
+git clone https://github.com/tomtvr/webex-python-bot-project
+```
 
-Clone the git repository to your local machine by running the following command on your terminal.
+I will note that there is a more secure way to clone the repository, which requires you to set up ssh keys on your github account. If you do not have an account, you can create one [here](https://github.com/join).
+
+**If you are content with not using ssh keys, you can skip the next step.**
+On top of git, you will need to install github-cli, this is a command line tool that will allow you to interact with your github account. You can install it by running the following command:
+
+**For windows**:
+go to the [github-cli](https://cli.github.com/) website and download the installer. It should automatically set everything up after you click Install.
+
+**For Mac**:
+open the terminal and run the following command:
+```sh
+brew install github-cli
+```
+
+**For Linux (Debian/Ubuntu)**:
+open the terminal and run the following command:
+```sh
+sudo apt-get install gh
+```
+
+**For Linux (Arch Linux)**:
+open the terminal and run the following command:
+```sh
+sudo pacman -S github-cli
+```
+
+Once you have installed github-cli, you can authenticate your git credentials by running the following command:
+```sh
+gh auth login
+```
+
+![alt text](image-9.png)
+
+This is the output of the command, it will ask you where you want to authenticate, here we will choose **"GitHub.com"**. and then press **Enter**. Then for the preferred protocol, we will choose **"SSH"**. and then press **Enter**. After that, it will ask you for a passphrase, you can leave this blank, and then press **Enter**. Then it will ask for the title of the key, you can press **Enter** again to use the default title. Then it will ask how you would like to authenticate, here we will choose **"Browser"**. and then press **Enter**.
+
+Lastly, it will open a browser window where you can login with your github account. Once you have logged in, you will need to put an 8 digit code that was displayed in your terminal and paste it into the browser. After that, you will be authenticated and you can close the browser window and return to the terminal.
+
+This setup will also allow you to clone the repository using ssh, which is a more secure method of cloning the repository.
 
 ```sh
 git clone git@github.com:tomtvr/webex-python-bot-project.git
 ```
 
-To go to the directory you have just cloned simply run `cd webex-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
-
+To go to the directory you have just cloned, simply run `cd webex-python-bot-project`. Note: You can press tab to autocomplete the directory name. Try running `dir` if you are on windows, or `ls` if you are on mac/linux, and check that you can see all the files you will need to get your Bot up and running.
 
 We recomend using a python virtual environment to install your dependencies too. You can find help on this [here](https://docs.python.org/3/library/venv.html).
 
@@ -58,7 +220,6 @@ After installing Python, open terminal and run the following command to create a
 ```sh
 python -m venv myvenv
 ```
-
 This will create a python virtual environment in the code directory for you to use. To use this in the terminal you have to run the following command
 
 ### Mac/Linux
@@ -81,7 +242,7 @@ Remember each time you create a new terminal, you need to activate your virtual 
 
 When running the virtual environment activation script on Windows, there could be some "Execution Policy" changes needed to do this.
 
-You need to run the following command from the terminal:
+You need to run the following command in powershell as an administrator:
 
 ```sh
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -91,15 +252,57 @@ More information for this can be found [here](https://docs.python.org/3/library/
 
 ## Run Bot
 
-### 1. Run Ngrok
 
-Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
+
+
+### 1. Setup Ngrok
+
+**Using Windows**:
+in your terminal, run the following command to download ngrok and automatically unzip it in your current directory as shown below:
+
+![alt text](image-10.png)
+
+```sh
+curl -O https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip && tar -xf ngrok-v3-stable-windows-amd64.zip && del ngrok-v3-stable-windows-amd64.zip
+```
+
+**Using Mac**:
+
+```sh
+brew install ngrok
+```
+
+**Using Linux (Debian/Ubuntu)**:
+```sh
+sudo apt-get install ngrok
+```
+
+**Using Linux (Arch Linux)**:
+```sh
+sudo pacman -S ngrok
+```
+
+Once you press **Enter**, you will see an ngrok.exe appear in your current directory.
+
+![alt text](image-11.png)
 
 Before you can use ngrok you need to sign up for an account to provide an authorisation key.
 
 Go to https://dashboard.ngrok.com/signup
 
-and follow the steps on: https://dashboard.ngrok.com/get-started/your-authtoken
+and once you are fully signed up, you will see this page:
+
+![alt text](image-12.png)
+
+Once you are on this page, scroll down a little until you see this:
+
+![alt text](image-13.png)
+
+Notice: My auth token in this example is censored for security reasons. If you ever intend on making guides, I do advise you never include your auth token in your guide.
+
+Click the copy symbol on the right of the auth token, and paste it into your terminal.
+
+**Important:** For windows users you may need to add .\ before the command to directly address ngrok from your current directory.
 
 On the terminal window, you can run this to add your user token:
 
@@ -113,7 +316,9 @@ ngrok config add-authtoken <your auth token>
 .\ngrok.exe config add-authtoken <your auth token>
 ```
 
-Then to run ngrok use one of the following commands:
+Another Note: These Crocodile keys: <> are placeholders for your actual auth token and are not meant to be included in your command. Alot of people have been confused by this and have been asking me why they are not working.
+
+Then to run an ngrok http tunnel use one of the following commands:
 
 **Mac and Linux**
 ```sh
@@ -127,15 +332,19 @@ ngrok http 12000
 
 ### 2. Configure Access Token
 
-Create a new file named `.env` in the root directory of this project. This is the same folder where `task1.py` is located. Use your favourite text editor to open the `.env` file. If you still do not have one yet, take a quick look at [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or (in case you are a very brave developer) [Vim](https://www.vim.org).
+Remember that access token for your webex bot that we saved in notepad earlier? Well now we need to add it to our codebase, in Visual Studio Code, click the Page icon to create a new file.
 
-In the `.env` file, add the following line:
+![alt text](image-14.png)
+
+Now you want to name your file '.env' and press **Enter**.
+
+Inside your empty .env file, add the following line:
 
 ```
 WEBEX_TEAMS_ACCESS_TOKEN='<my-bot-access-token>'
 ```
 
-Replace <my-bot-access-token> with the Access Token you saved during the **Create a Bot** step. Make sure the token is enclosed in quotes, otherwise, it won't be recognised correctly.
+Remember to remove the crocodile keys, they're used to denote something that you need to replace with your own information. Paste that bot access token from earlier in between the single quotes.
 
 Next, open `task1.py`. This file contains the main code for your bot. If this is your first time seeing Python code, here are a few things to note:
 
@@ -153,6 +362,12 @@ On the terminal window, run the following to get your bot working.
 ```sh
 python task1.py
 ```
+
+Or you can press the Play button on the top right corner of the file to run it directly in your terminal.
+
+![alt text](image-15.png)
+
+**NOTE:** whenever you want to run your bot, you will need to first have a terminal open and run your ngrok http tunnel.
 
 ### 4. Interact with your Bot
 Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**).
